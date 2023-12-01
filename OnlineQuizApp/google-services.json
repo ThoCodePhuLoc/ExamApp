@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "project_info": {
     "project_number": "557967633898",
@@ -26,4 +27,34 @@
     }
   ],
   "configuration_version": "1"
+=======
+{
+  "project_info": {
+    "project_number": "557967633898",
+    "project_id": "onlinequizapp-5a33a",
+    "storage_bucket": "onlinequizapp-5a33a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:557967633898:android:aa3602af55cfbc75ec9693",
+        "android_client_info": {
+          "package_name": "com.example.onlinequizapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGywRX0n8n1tJKDAHcsTDb8if41PR_YQo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+>>>>>>> origin/Mạnh
 }
