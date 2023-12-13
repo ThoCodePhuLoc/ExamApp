@@ -1,7 +1,10 @@
 package com.example.onlinequizapp.fragment;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -15,6 +18,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.onlinequizapp.MainActivity;
+import com.example.onlinequizapp.Profile.ChangePassView;
 import com.example.onlinequizapp.Profile.SettingView;
 import com.example.onlinequizapp.R;
 import com.google.firebase.auth.FirebaseAuth;
@@ -49,9 +53,21 @@ public class ProfileFragment extends Fragment {
             }
         });
         comeToSetting();
+        updatePassWord();
         // Inflate the layout for this fragment
         return view;
     }
+
+    private void updatePassWord() {
+        Changepass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), ChangePassView.class);
+                startActivity(intent);
+            }
+        });
+    }
+
     public void onLogout() {
         // Đăng xuất người dùng
         FirebaseAuth.getInstance().signOut();
@@ -76,6 +92,8 @@ public class ProfileFragment extends Fragment {
         tvEmail.setText(email);
         Glide.with((this)).load(photoUrl).error(R.drawable.ic_avatar).into(avatar);
     }
+
+
     private void comeToSetting(){
         Setting.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,4 +103,5 @@ public class ProfileFragment extends Fragment {
             }
         });
     }
+
 }

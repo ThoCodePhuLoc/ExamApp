@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package com.example.onlinequizapp;
 
 import androidx.annotation.NonNull;
@@ -26,6 +25,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class MainActivity2 extends AppCompatActivity {
     ActivityMain2Binding binding;
     Button logout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,13 +38,13 @@ public class MainActivity2 extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 if (item.getItemId() == R.id.join) {
                     repalceFreagment(new JoinFragment());
-                }else if (item.getItemId() == R.id.create) {
+                } else if (item.getItemId() == R.id.create) {
                     repalceFreagment(new CreateFragment());
-                }else if (item.getItemId() == R.id.profile) {
+                } else if (item.getItemId() == R.id.profile) {
                     repalceFreagment(new ProfileFragment());
                     logout = findViewById(R.id.buttonLogout);
 
-                }else if (item.getItemId() == R.id.home) {
+                } else if (item.getItemId() == R.id.home) {
                     repalceFreagment(new HomeFragment());
                 }
                 return true;
@@ -52,27 +52,11 @@ public class MainActivity2 extends AppCompatActivity {
         });
 
     }
-    private void repalceFreagment(Fragment fragment){
+
+    private void repalceFreagment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.contentview, fragment);
         fragmentTransaction.commit();
     }
-=======
-package com.example.onlinequizapp;
-
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.os.Bundle;
-
-import com.google.firebase.auth.FirebaseUser;
-
-public class MainActivity2 extends AppCompatActivity {
-    FirebaseUser mAuth;
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
-    }
->>>>>>> origin/Mạnh
 }
